@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap');
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Playfair Display SC", serif;
+  color: white;
+}
+
+/* ── REPLACE THIS PART ── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 60px;
+  transition: all 0.4s;
+}
+header.scrolled {
+  background: rgba(4,4,15,0.96);
+  backdrop-filter: blur(12px);
+  padding: 18px 60px;
+  border-bottom: 1px solid rgba(125,133,144,0.2);
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: #f5f0e8;
+  text-decoration: none;
+  margin: 0;
+}
+nav { width: auto; }
+nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #8a8a9a;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s;
+  position: relative;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: #7D8590;
+  transition: width 0.3s;
+}
+nav ul li a:hover { color: #7D8590; }
+nav ul li a:hover::after { width: 100%; }
+
+.all {
+    text-align: center;
+    border: 1px solid #7D8590;
+    margin: 40px auto;
+    border-radius: 10px;
+    width: 60%;
+    padding: 2rem;
+}
+.field {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.field label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #9BA3AE;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    background: #0d0d0d;
+    border: 0.5px solid rgba(125,133,144,0.25);
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: #7D8590;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.acquire-btn {
+    width: 100%;
+    background: #7D8590;
+    border: none;
+    border-radius: 4px;
+    padding: 14px;
+    color: #050520;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.acquire-btn:hover {
+    background: #A8B0BC;
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 11px;
+    color: #3a4660;
+    margin-top: 1.2rem;
+    letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
